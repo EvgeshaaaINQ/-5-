@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Панель баристи — Cozy Bean</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <a class="logo" href="/">Cozy Bean</a>
+    <span>Панель баристи</span>
+  </header>
+  <main class="section">
+    <form id="loginForm">
+      <label>Токен адміністратора
+        <input type="password" id="token" autocomplete="off">
+      </label>
+      <button class="btn" type="submit">Увійти</button>
+    </form>
+    <p class="status" id="msg" role="status"></p>
+
+    <div id="panel" hidden>
+      <h2>Замовлення</h2>
+      <div id="orders"></div>
+
+      <h2>Меню</h2>
+      <ul id="menuList" class="menu-list"></ul>
+
+      <h3>Додати позицію</h3>
+      <form id="addForm">
+        <label>Назва <input type="text" name="name" required minlength="2" maxlength="60"></label>
+        <label>Ціна, ₴ <input type="number" name="price" required min="1" max="10000"></label>
+        <label>Категорія
+          <select name="category">
+            <option value="coffee">Кава</option>
+            <option value="tea">Чай</option>
+            <option value="dessert">Десерти</option>
+          </select>
+        </label>
+        <label class="check"><input type="checkbox" name="lactoseFree"> Без лактози</label>
+        <label>Опис <input type="text" name="desc" maxlength="200"></label>
+        <button class="btn" type="submit">Додати</button>
+      </form>
+    </div>
+  </main>
+  <script src="admin.js"></script>
+</body>
+</html>

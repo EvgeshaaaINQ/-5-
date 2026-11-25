@@ -1,0 +1,17 @@
+{
+  "name": "cozy-bean",
+  "version": "1.0.0",
+  "description": "Cozy Bean: вебзастосунок кав'ярні (Express + SQLite)",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "better-sqlite3": "^13.2.0",
+    "express": "^5.3.0",
+    "helmet": "^8.3.0"
+  }
+}
